@@ -1,0 +1,12 @@
+---
+title: "Problem Description and Objectives"
+output: html_notebook
+---
+
+Determing whether or not a given person is a male or female based off their appearance can be very helpful. If a certain software captures a large volume of images of faces for security purposes, then software like this can be useful for sorting/categorizing those images. If someone is trying to identify/locate a person then a useful utility could be automating the decision of "Is this person a male or a female?" For example, say there is a criminal that is being sought out by authorities and they have an idea of his general whereabouts. They might set up a device to capture the faces of humans who pass through a certain area, and record their faces as images with certain data such as date, time, and their gender.
+
+The goal of this project is to train a model to be proficient in identifying the gender of a human being based upon a picture of their face. This idea may or may not have stemmed from an infatuation with The Punisher series on Netflix, where "Micro" locates Punisher using software to recognize certain movement patterns of a particular individual.
+
+One possible extension of this project that would be fun to explore is adding in the ability to compare two given pictures and return a percentage of how similar they are.
+
+Having this software could be of great help to law enforcement. It also provides a fun activity in the form of passing in unexpected images and seeing how the gender is interpreted. This could possibly help us determine and analyze what features of a person are perceived as masculine and feminine.
