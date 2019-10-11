@@ -4,18 +4,8 @@ author: "Sean McTiernan"
 output: html_notebook
 ---
 
-The data set I have chosen for this project comes from https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
-This data is a set of labeled image data of celebrities collected from IMDB and Wiki (but for now I will limit myself to only the ~1GB of data from Wiki's faces only dataset), and with the image data comes information scraped from their profiles about their age and gender. I plan to use this data to train a model to recognize whether an image of a person is a male or a female. I downloaded the data from the above link and it gave me a TAR file. After extracting the data from this file, it seems that it contains .jpg images in a tabular form.
+For this project, I will be working with a [data set of fruit images](https://github.com/Horea94/Fruit-Images-Dataset).
 
-### The variables are as follows:
+This data set provides labeled image data of various fruits. The images are of type JPEG. There are over 80,000 images provided in total to allow for sufficient training of a model as well as testing the model.
 
-* dob: date of birth (Matlab serial date number)
-* photo_taken: year when the photo was taken
-* full_path: path to file
-* gender: 0 for female and 1 for male, NaN if unknown
-* name: name of the celebrity
-* face_location: location of the face. To crop the face in Matlab run
-* face_score: detector score (the higher the better). Inf implies that no face was found in the image and the face_location then just returns the entire image
-* second_face_score: detector score of the face with the second highest score. This is useful to ignore images with more than one face. second_face_score is NaN if no second face was detected.
-* celeb_names (IMDB only): list of all celebrity names
-* celeb_id (IMDB only): index of celebrity name
+Specific fruits and vegetables contained within this data set include: Apples (different varieties: Crimson Snow, Golden, Golden-Red, Granny Smith, Pink Lady, Red, Red Delicious), Apricot, Avocado, Avocado ripe, Banana (Yellow, Red, Lady Finger), Beetroot Red, Blueberry, Cactus fruit, Cantaloupe (2 varieties), Carambula, Cauliflower, Cherry (different varieties, Rainier), Cherry Wax (Yellow, Red, Black), Chestnut, Clementine, Cocos, Dates, Eggplant, Ginger Root, Granadilla, Grape (Blue, Pink, White (different varieties)), Grapefruit (Pink, White), Guava, Hazelnut, Huckleberry, Kiwi, Kaki, Kohlrabi, Kumsquats, Lemon (normal, Meyer), Lime, Lychee, Mandarine, Mango (Green, Red), Mangostan, Maracuja, Melon Piel de Sapo, Mulberry, Nectarine (Regular, Flat), Nut (Forest, Pecan), Onion (Red, White), Orange, Papaya, Passion fruit, Peach (different varieties), Pepino, Pear (different varieties, Abate, Forelle, Kaiser, Monster, Red, Williams), Pepper (Red, Green, Yellow), Physalis (normal, with Husk), Pineapple (normal, Mini), Pitahaya Red, Plum (different varieties), Pomegranate, Pomelo Sweetie, Potato (Red, Sweet, White), Quince, Rambutan, Raspberry, Redcurrant, Salak, Strawberry (normal, Wedge), Tamarillo, Tangelo, Tomato (different varieties, Maroon, Cherry Red, Yellow), Walnut.

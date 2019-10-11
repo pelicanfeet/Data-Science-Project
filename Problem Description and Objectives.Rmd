@@ -1,12 +1,11 @@
 ---
-title: "Problem Description and Objectives"
+title: "Problem Description, Background, and Objectives"
+author: "Sean McTiernan"
 output: html_notebook
 ---
 
-Determing whether or not a given person is a male or female based off their appearance can be very helpful. If a certain software captures a large volume of images of faces for security purposes, then software like this can be useful for sorting/categorizing those images. If someone is trying to identify/locate a person then a useful utility could be automating the decision of "Is this person a male or a female?" For example, say there is a criminal that is being sought out by authorities and they have an idea of his general whereabouts. They might set up a device to capture the faces of humans who pass through a certain area, and record their faces as images with certain data such as date, time, and their gender.
+Though there is no real "problem" here, automated identification of fruits could prove to be actually useful as some sort of a business application/utility. For example, one may be on the brink of inventing some sort of machine which automates the process of sorting fruits. One can readily imagine that having software to see the image and classify it would greatly help this hypothetical invention.
 
-The goal of this project is to train a model to be proficient in identifying the gender of a human being based upon a picture of their face. This idea may or may not have stemmed from an infatuation with The Punisher series on Netflix, where "Micro" locates Punisher using software to recognize certain movement patterns of a particular individual.
+To provide a sort of background, image classification is a popular and exciting application of machine learning which allows a model to "recognize" certain images. It recognizes these images by being fed tons and tons of "training data", and being coded to make decisions based off what it "sees" in the image about what the image is. This model is then to be tested to see how accurate it is at classifying images. Somewhat counter-intuitively, 100% accuracy is not desirable because this is referred to as "overfitting". This means that an analysis corresponds too closely to a particular data set which means it can fail to fit additional data or fail to classify future image data.
 
-One possible extension of this project that would be fun to explore is adding in the ability to compare two given pictures and return a percentage of how similar they are.
-
-Having this software could be of great help to law enforcement. It also provides a fun activity in the form of passing in unexpected images and seeing how the gender is interpreted. This could possibly help us determine and analyze what features of a person are perceived as masculine and feminine.
+The goal of this project is to train a model so that it can sufficiently identify fruits from images. These classifications will be based off the dataset of images of various fruits and vegetables linked in the Data Description document. This model will be performing multiclass classification.
