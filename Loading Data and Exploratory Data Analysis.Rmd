@@ -1,0 +1,100 @@
+---
+title: "Loading Data and Exploratory Data Analysis"
+author: "Sean McTiernan"
+output: html_notebook
+---
+
+```{r}
+library(keras)
+library(tensorflow)
+
+# list of fruits to be modeled
+fruit_list <- c("Kiwi", "Banana", "Apricot", "Avocado", "Cocos", "Clementine", "Mandarine", "Orange", "Limes", "Lemon", "Peach", "Plum", "Raspberry", "Strawberry", "Pineapple", "Pomegranate")
+
+# image size to scale down to (original images are 100 x 100 px)
+img_width <- 20
+img_height <- 20
+target_size <- c(img_width, img_height)
+
+# RGB = 3 channels
+channels <- 3
+
+# paths to image folders
+fruit_training_data_path <- "/Users/User/Desktop/Fall_2019/DS_201/DS_201_Project/Data-Science-Project/fruit-img-data/fruits-360_dataset/fruits-360/Training"
+
+fruit_test_data_path <- "/Users/User/Desktop/Fall_2019/DS_201/DS_201_Project/Data-Science-Project/fruit-img-data/fruits-360_dataset/fruits-360/Test"
+
+
+# Rescaling training data, with optional augmentations
+train_data_gen = image_data_generator(
+  rescale = 1/255 #,
+  #rotation_range = 40,
+  #width_shift_range = 0.2,
+  #height_shift_range = 0.2,
+  #shear_range = 0.2,
+  #zoom_range = 0.2,
+  #horizontal_flip = TRUE,
+  #fill_mode = "nearest"
+)
+
+# Rescaling validation data
+valid_data_gen <- image_data_generator(
+  rescale = 1/255
+)
+
+# Training images
+train_image_array_gen <- flow_images_from_directory(fruit_training_data_path, 
+                                          train_data_gen,
+                                          target_size = target_size,
+                                          class_mode = "categorical",
+                                          classes = fruit_list,
+                                          seed = 42)
+
+# Validation images
+valid_image_array_gen <- flow_images_from_directory(fruit_test_data_path, 
+                                          valid_data_gen,
+                                          target_size = target_size,
+                                          class_mode = "categorical",
+                                          classes = fruit_list,
+                                          seed = 42)
+
+
+cat("Number of images per class: ")
+table(factor(train_image_array_gen$classes))
+
+cat("\nClass label vs index mapping:\n")
+train_image_array_gen$class_indices
+
+train_image_array_gen$class_indices
+
+# number of training samples
+train_samples <- train_image_array_gen$n
+
+# number of validation samples
+valid_samples <- valid_image_array_gen$n
+
+# defining batch size and number of epochs
+batch_size <- 32
+epochs <- 10
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
